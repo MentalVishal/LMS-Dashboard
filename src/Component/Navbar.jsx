@@ -29,7 +29,9 @@ export const Navbar = () => {
 
   const handelLogout = async () => {
     localStorage.removeItem("loginUser");
+    isAuth = false;
     toast.success("Logout Successfull");
+    navigate("/login");
   };
 
   return (
